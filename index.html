@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biglietteria</title>
+    <!-- my-style -->
+    <link rel="stylesheet" href="css/style.css">
+</head> 
+
+<body>
+    <div class="container flex">
+        <div class="left">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="name">
+        </div>   
+
+        <div class="center">
+            <label for="km">KM da percorrere</label>
+            <input type="number" name="km" id="km">
+        </div>
+
+        <div class="right">
+            <label for="age">Fascia di età</label>
+            <select id="age" name="eta">
+                <option value="Minorenne">Minorenne</option>
+                <option value="Maggiorenne">Maggiorenne</option>
+                <option value="Ultra65enne">Ultra65enne</option>
+            </select>
+        </div>
+    </div>
+    <div class="container-flex">
+        <button type="submit" value="Submit" id="invia">GENERA</button>
+    </div>
+    
+
+    <div>Prezzo: <span id="prezzo"></span></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
