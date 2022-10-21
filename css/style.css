@@ -4,15 +4,27 @@
     box-sizing: border-box;
 }
 
-.container {
+body {
+    background-color: green;
+}
+
+.container-up {
     max-width: 1200px;
     margin: 2rem auto 0;
+    background-color: salmon;
+    color: white;
+    margin-bottom: 2rem;
 }
 
 .flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+label{
+    margin-bottom: .4rem;
+    font-size: 1.2rem;
 }
 
 .left {
@@ -40,4 +52,38 @@
     margin-top: 2rem;
     display: flex;
     justify-content: center;
+}
+
+.bnt_green {
+    color: white;
+    text-decoration: none;
+    background-color: green;
+    border: 0;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.bnt_red {
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    border: 0;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-down {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    background-color: salmon;
+    color: white;
+}
+
+.box_ticket {
+    margin-top: 2rem;
+    background-color: red;
+    font-size: 3rem;
 }

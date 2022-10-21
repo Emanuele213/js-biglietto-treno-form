@@ -1,28 +1,31 @@
-let nome = document.getElementById("nome");
-let kmDaFare = document.getElementById("km");
-let submit = document.getElementById("invia");
-let eta = document.getElementById("eta");
+const eleName = document.querySelector('#name');
+const elekm = document.querySelector('#km');
+const eleAge = document.querySelector('#age');
+const eleBox = document.querySelector('box_info');
+const eleBoxTicket = document.querySelector('.box_ticket');
+const eleConferme = document.querySelector('#invia'); 
+const eleDetelete = document.querySelector('#cancella');
 
-submit.addEventListener("click", function biglietto() {
-    let nome = document.getElementById("name");
-    let kmDaFare = document.getElementById("km");
-    let eta = document.getElementById("age");
-    let prezzoBiglietto = kmDaFare.value * "0.21";
-    if (eta.value = 'Minorenne') {
-        let sconto1 = (prezzoBiglietto * 0.2);
-        let prezzo1 = (prezzoBiglietto - sconto1);
-        let prezzoScontato1 = prezzo1.toFixed(2);
-       
-        document.getElementById("prezzo").innerHTML = name + prezzoScontato1 + "€";
+eleConferme.addEventListener('click', function () { 
+    const Km = parseFloat(elekm.value); 
+    const basePrice = parseFloat(Km* 0.21); 
+    const age = eleAge.value;
+    let discount = 0;
+
+    if (age === 'min') {
+        discount = 20;
+    }else if (age === 'over') {
+        discount = 40;
     }
-    else if (eta.value = 'Ultra65enne') {
-        let sconto2 = (prezzoBiglietto * 0.4);
-        let prezzo2 = (prezzoBiglietto - sconto2);
-        let prezzoScontato2 = prezzo2.toFixed(2);
-        document.getElementById("prezzo").innerHTML = name + prezzoScontato2 + "€";
-    }
-    else (eta.value = 'Maggiorenne' ) 
-    {
-        document.getElementById("prezzo").innerHTML = name + prezzoBiglietto + "€";
+
+    if (eleName.value === '' || elekm.value === '' || eleAge.value === 'none') {
+        eleBoxTicket.innerHTML = ('Compila il form');
+    }else {
+        let totalPrice = basePrice - basePrice * discount / 100;
+        totalPrice = parseFloat(totalPrice.toFixed(2));
+        eleBoxTicket.innerHTML = (`Prezzo biglietto: ${totalPrice} €`);
     }
 });
+ eleDetelete.addEventListener('click', function () {
+    document.location.reload();
+ });

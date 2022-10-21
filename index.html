@@ -11,32 +11,38 @@
 </head> 
 
 <body>
-    <div class="container flex">
-        <div class="left">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="name">
-        </div>   
-
-        <div class="center">
-            <label for="km">KM da percorrere</label>
-            <input type="number" name="km" id="km">
-        </div>
-
-        <div class="right">
-            <label for="age">Fascia di età</label>
-            <select id="age" name="eta">
-                <option value="Minorenne">Minorenne</option>
-                <option value="Maggiorenne">Maggiorenne</option>
-                <option value="Ultra65enne">Ultra65enne</option>
-            </select>
+    <div class="container-up">
+        <form action="">
+            <div class="flex">
+                <div class="left">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="name" id="name">
+                </div>   
+        
+                <div class="center">
+                    <label for="km">KM da percorrere</label>
+                    <input type="number" name="km" id="km">
+                </div>
+        
+                <div class="right">
+                    <label for="age">Fascia di età</label>
+                    <select id="age" name="age" form="age">
+                        <option value="none">-_-_-_-</option>
+                        <option value="min">Minorenne</option>
+                        <option value="max">Maggiorenne</option>
+                        <option value="over">Ultra65enne</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="container-flex">
+            <button class="bnt_green" type="submit" value="Submit" id="invia">GENERA</button>
+            <button class="bnt_red" type="submit" value="Submit" id="cancella">CANCELLA</button>
         </div>
     </div>
-    <div class="container-flex">
-        <button type="submit" value="Submit" id="invia">GENERA</button>
+    <div class="container-down">
+        <div class="box_ticket"></div>
     </div>
-    
-
-    <div>Prezzo: <span id="prezzo"></span></div>
     <script src="js/script.js"></script>
 </body>
 </html>
